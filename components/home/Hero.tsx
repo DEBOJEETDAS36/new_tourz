@@ -114,10 +114,23 @@ export default function Hero() {
           </div>
 
           {/* Search Button */}
-          <button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-3 rounded-lg transition flex items-center justify-center space-x-2">
+          <button className="w-full bg-[#FCD34D] hover:bg-[#EAB308] text-[#0F2942] font-bold py-3 rounded-lg transition flex items-center justify-center space-x-2">
             <Search size={20} />
             <span>Search Tours</span>
           </button>
+        </div>
+
+        {/* Quick Links */}
+        <div className="mt-12 flex flex-wrap gap-4 justify-center">
+          <Link href="/leisure" className="bg-[#14B8A6]/20 hover:bg-[#14B8A6]/30 text-white px-6 py-2 rounded-full font-semibold transition backdrop-blur-sm border border-[#14B8A6]/50">
+            Leisure Tours
+          </Link>
+          <Link href="/mice" className="bg-[#14B8A6]/20 hover:bg-[#14B8A6]/30 text-white px-6 py-2 rounded-full font-semibold transition backdrop-blur-sm border border-[#14B8A6]/50">
+            MICE Events
+          </Link>
+          <Link href="/gallery" className="bg-[#14B8A6]/20 hover:bg-[#14B8A6]/30 text-white px-6 py-2 rounded-full font-semibold transition backdrop-blur-sm border border-[#14B8A6]/50">
+            View Gallery
+          </Link>
         </div>
 
         {/* Quick Links */}
