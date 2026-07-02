@@ -28,7 +28,7 @@ export default function Newsletter() {
   };
 
   return (
-    <section className="py-16 sm:py-20 bg-gradient-to-r from-blue-600 to-blue-800">
+    <section className="py-16 sm:py-20 bg-gradient-to-r from-[#14B8A6] to-[#0d9488]">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Content Container */}
@@ -43,7 +43,7 @@ export default function Newsletter() {
           </h2>
 
           {/* Subheading */}
-          <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
             Subscribe to our newsletter and receive special discounts, travel tips, and exclusive offers directly in your inbox.
           </p>
 
@@ -55,12 +55,12 @@ export default function Newsletter() {
                 placeholder="Enter your email address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 px-4 sm:px-6 py-3 sm:py-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-900 placeholder-gray-500"
+                className="flex-1 px-4 sm:px-6 py-3 sm:py-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-white text-gray-900 placeholder-gray-500"
               />
               <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="bg-white hover:bg-gray-100 disabled:bg-gray-300 text-blue-600 font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition whitespace-nowrap"
+                className="bg-[#FCD34D] hover:bg-[#EAB308] disabled:bg-gray-300 text-[#0F2942] font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition whitespace-nowrap"
               >
                 {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
               </button>
@@ -83,7 +83,7 @@ export default function Newsletter() {
           </form>
 
           {/* Privacy Notice */}
-          <p className="text-sm text-blue-100 mt-6">
+          <p className="text-sm text-white/80 mt-6">
             We respect your privacy. Unsubscribe anytime.
           </p>
         </div>
