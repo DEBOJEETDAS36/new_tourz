@@ -7,15 +7,15 @@ import { featuredTours } from '@/lib/data/tours';
 
 export default function FeaturedTours() {
   return (
-    <section className="py-16 sm:py-20 bg-white">
+    <section className="py-16 sm:py-20 bg-[#0F2942]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Featured <span className="text-blue-600">Tours</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+            Featured <span className="text-[#14B8A6]">Tours</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-[#94A3B8] max-w-2xl mx-auto">
             Handpicked destinations and experiences curated just for you
           </p>
         </div>
@@ -25,7 +25,7 @@ export default function FeaturedTours() {
           {featuredTours.map((tour) => (
             <div
               key={tour.id}
-              className="bg-white rounded-lg shadow-md hover:shadow-2xl transition-shadow duration-300 overflow-hidden group"
+              className="bg-[#1a3a52] rounded-lg shadow-md hover:shadow-2xl transition-shadow duration-300 overflow-hidden group border border-[#374151]"
             >
               {/* Image Container */}
               <div className="relative h-48 overflow-hidden">
@@ -36,7 +36,7 @@ export default function FeaturedTours() {
                 />
                 {/* Discount Badge */}
                 {tour.originalPrice > tour.price && (
-                  <div className="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                  <div className="absolute top-4 right-4 bg-[#EF4444] text-white px-3 py-1 rounded-full text-sm font-bold">
                     {Math.round(((tour.originalPrice - tour.price) / tour.originalPrice) * 100)}% OFF
                   </div>
                 )}
@@ -46,18 +46,18 @@ export default function FeaturedTours() {
               <div className="p-5">
                 
                 {/* Location */}
-                <div className="flex items-center text-gray-600 mb-2 text-sm">
+                <div className="flex items-center text-[#94A3B8] mb-2 text-sm">
                   <MapPin size={16} className="mr-1" />
                   <span>{tour.destination}</span>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
+                <h3 className="text-lg font-bold text-white mb-2 line-clamp-2">
                   {tour.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                <p className="text-[#94A3B8] text-sm mb-4 line-clamp-2">
                   {tour.description}
                 </p>
 
@@ -68,16 +68,16 @@ export default function FeaturedTours() {
                       <Star
                         key={i}
                         size={16}
-                        className={`${i < Math.floor(tour.rating) ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
+                        className={`${i < Math.floor(tour.rating) ? 'fill-[#FCD34D] text-[#FCD34D]' : 'text-[#374151]'}`}
                       />
                     ))}
                   </div>
-                  <span className="text-sm font-semibold text-gray-900">{tour.rating}</span>
-                  <span className="text-xs text-gray-600">({tour.reviews})</span>
+                  <span className="text-sm font-semibold text-white">{tour.rating}</span>
+                  <span className="text-xs text-[#94A3B8]">({tour.reviews})</span>
                 </div>
 
                 {/* Tour Details */}
-                <div className="grid grid-cols-2 gap-2 mb-4 text-xs text-gray-600">
+                <div className="grid grid-cols-2 gap-2 mb-4 text-xs text-[#94A3B8]">
                   <div className="flex items-center">
                     <Clock size={14} className="mr-1" />
                     <span>{tour.duration}</span>
@@ -89,24 +89,24 @@ export default function FeaturedTours() {
                 </div>
 
                 {/* Price */}
-                <div className="border-t pt-4 mb-4">
+                <div className="border-t border-[#374151] pt-4 mb-4">
                   <div className="flex items-baseline gap-2 mb-2">
-                    <span className="text-2xl font-bold text-gray-900">
+                    <span className="text-2xl font-bold text-white">
                       ₹{tour.price.toLocaleString()}
                     </span>
                     {tour.originalPrice > tour.price && (
-                      <span className="text-sm text-gray-500 line-through">
+                      <span className="text-sm text-[#94A3B8] line-through">
                         ₹{tour.originalPrice.toLocaleString()}
                       </span>
                     )}
                   </div>
-                  <span className="text-xs text-gray-600">per person</span>
+                  <span className="text-xs text-[#94A3B8]">per person</span>
                 </div>
 
                 {/* View Details Button */}
                 <Link
                   href={`/tours/${tour.id}`}
-                  className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold py-2 rounded-lg transition flex items-center justify-center space-x-2"
+                  className="w-full bg-[#FCD34D] hover:bg-[#EAB308] text-[#0F2942] font-semibold py-2 rounded-lg transition flex items-center justify-center space-x-2"
                 >
                   <span>View Details</span>
                   <ArrowRight size={16} />
@@ -120,7 +120,7 @@ export default function FeaturedTours() {
         <div className="text-center mt-12">
           <Link
             href="/tours"
-            className="inline-block bg-gray-900 hover:bg-gray-800 text-white font-bold py-3 px-8 rounded-lg transition"
+            className="inline-block bg-[#14B8A6] hover:bg-[#0d9488] text-white font-bold py-3 px-8 rounded-lg transition"
           >
             View All Tours
           </Link>
