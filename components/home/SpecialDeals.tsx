@@ -100,7 +100,7 @@ export default function SpecialDeals() {
                   />
 
                   {/* Badge */}
-                  <div className="absolute top-3 left-3 bg-gradient-to-r from-[#EF4444] to-[#DC2626] text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+                  <div className="absolute top-3 left-3 bg-linear-to-r from-[#EF4444] to-[#DC2626] text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
                     <Zap size={12} />
                     {deal.badge}
                   </div>
@@ -185,7 +185,7 @@ export default function SpecialDeals() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-12 bg-gradient-to-r from-[#EF4444]/10 to-[#F97316]/10 rounded-lg p-8 text-center border-2 border-[#EF4444]/30">
+        <div className="mt-12 bg-linear-to-r from-[#EF4444]/10 to-[#F97316]/10 rounded-lg p-8 text-center border-2 border-[#EF4444]/30">
           <h3 className="text-2xl font-bold text-white mb-2">
             Hurry! Limited Slots Available
           </h3>
