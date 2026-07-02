@@ -24,15 +24,15 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-16 sm:py-20 bg-gradient-to-b from-gray-900 to-gray-800">
+    <section className="py-16 sm:py-20 bg-gradient-to-b from-[#0F2942] to-[#1a3a52]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-            What Our <span className="text-blue-400">Travelers</span> Say
+            What Our <span className="text-[#14B8A6]">Travelers</span> Say
           </h2>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+          <p className="text-lg text-[#94A3B8] max-w-2xl mx-auto">
             Real experiences from real adventurers who chose Tourz
           </p>
         </div>
@@ -43,15 +43,15 @@ export default function Testimonials() {
             {visibleTestimonials.map((testimonial, index) => (
               <div
                 key={testimonial.id}
-                className={`bg-white rounded-lg shadow-lg p-6 transition-all duration-300 ${
-                  index === 1 ? 'md:scale-105 md:shadow-2xl' : 'opacity-80'
+                className={`bg-[#1a3a52] rounded-lg shadow-lg p-6 transition-all duration-300 border border-[#374151] ${
+                  index === 1 ? 'md:scale-105 md:shadow-2xl md:border-[#14B8A6]' : 'opacity-80'
                 }`}
               >
                 {/* Quote Icon */}
-                <Quote size={32} className="text-blue-500 mb-4 opacity-50" />
+                <Quote size={32} className="text-[#14B8A6] mb-4 opacity-50" />
 
                 {/* Testimonial Text */}
-                <p className="text-gray-700 text-sm leading-relaxed mb-4 italic">
+                <p className="text-[#94A3B8] text-sm leading-relaxed mb-4 italic">
                   "{testimonial.text}"
                 </p>
 
@@ -63,18 +63,18 @@ export default function Testimonials() {
                       size={16}
                       className={`${
                         i < Math.floor(testimonial.rating)
-                          ? 'fill-yellow-400 text-yellow-400'
-                          : 'text-gray-300'
+                          ? 'fill-[#FCD34D] text-[#FCD34D]'
+                          : 'text-[#374151]'
                       }`}
                     />
                   ))}
-                  <span className="text-xs text-gray-600 ml-2">
+                  <span className="text-xs text-[#94A3B8] ml-2">
                     {testimonial.rating}
                   </span>
                 </div>
 
                 {/* Divider */}
-                <div className="border-t border-gray-200 pt-4 mb-4" />
+                <div className="border-t border-[#374151] pt-4 mb-4" />
 
                 {/* Author Info */}
                 <div className="flex items-center gap-3">
@@ -84,13 +84,13 @@ export default function Testimonials() {
                     className="w-12 h-12 rounded-full object-cover"
                   />
                   <div>
-                    <h4 className="font-bold text-gray-900 text-sm">
+                    <h4 className="font-bold text-white text-sm">
                       {testimonial.name}
                     </h4>
-                    <p className="text-xs text-gray-600">
+                    <p className="text-xs text-[#94A3B8]">
                       {testimonial.location}
                     </p>
-                    <p className="text-xs text-blue-600 font-semibold">
+                    <p className="text-xs text-[#14B8A6] font-semibold">
                       {testimonial.tour}
                     </p>
                   </div>
@@ -103,7 +103,7 @@ export default function Testimonials() {
           <div className="flex justify-center items-center gap-4">
             <button
               onClick={goToPrev}
-              className="bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full transition shadow-lg"
+              className="bg-[#14B8A6] hover:bg-[#0d9488] text-white p-3 rounded-full transition shadow-lg"
             >
               <ChevronLeft size={24} />
             </button>
@@ -116,8 +116,8 @@ export default function Testimonials() {
                   onClick={() => setCurrentIndex(index)}
                   className={`w-3 h-3 rounded-full transition ${
                     index === currentIndex
-                      ? 'bg-blue-500'
-                      : 'bg-gray-500 hover:bg-gray-400'
+                      ? 'bg-[#FCD34D]'
+                      : 'bg-[#374151] hover:bg-[#94A3B8]'
                   }`}
                 />
               ))}
@@ -125,7 +125,7 @@ export default function Testimonials() {
 
             <button
               onClick={goToNext}
-              className="bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full transition shadow-lg"
+              className="bg-[#14B8A6] hover:bg-[#0d9488] text-white p-3 rounded-full transition shadow-lg"
             >
               <ChevronRight size={24} />
             </button>
@@ -134,17 +134,17 @@ export default function Testimonials() {
 
         {/* Statistics */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-center">
-            <h3 className="text-4xl font-bold text-blue-400 mb-2">10,000+</h3>
-            <p className="text-gray-300">Happy Travelers</p>
+          <div className="text-center p-6 rounded-lg bg-[#1a3a52] border border-[#374151]">
+            <h3 className="text-4xl font-bold text-[#14B8A6] mb-2">10,000+</h3>
+            <p className="text-[#94A3B8]">Happy Travelers</p>
           </div>
-          <div className="text-center">
-            <h3 className="text-4xl font-bold text-blue-400 mb-2">4.9★</h3>
-            <p className="text-gray-300">Average Rating</p>
+          <div className="text-center p-6 rounded-lg bg-[#1a3a52] border border-[#374151]">
+            <h3 className="text-4xl font-bold text-[#FCD34D] mb-2">4.9★</h3>
+            <p className="text-[#94A3B8]">Average Rating</p>
           </div>
-          <div className="text-center">
-            <h3 className="text-4xl font-bold text-blue-400 mb-2">50+</h3>
-            <p className="text-gray-300">Destinations</p>
+          <div className="text-center p-6 rounded-lg bg-[#1a3a52] border border-[#374151]">
+            <h3 className="text-4xl font-bold text-[#14B8A6] mb-2">50+</h3>
+            <p className="text-[#94A3B8]">Destinations</p>
           </div>
         </div>
       </div>
