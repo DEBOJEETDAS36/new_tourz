@@ -43,15 +43,15 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section className="py-16 sm:py-20 bg-white">
+    <section className="py-16 sm:py-20 bg-[#0F2942]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Why Choose <span className="text-blue-600">Tourz?</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+            Why Choose <span className="text-[#14B8A6]">Tourz?</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-[#94A3B8] max-w-2xl mx-auto">
             We provide exceptional travel experiences with unmatched service and support
           </p>
         </div>
@@ -63,20 +63,20 @@ export default function WhyChooseUs() {
             return (
               <div
                 key={feature.id}
-                className="flex flex-col items-center text-center p-6 rounded-lg hover:bg-gray-50 transition-colors duration-300"
+                className="flex flex-col items-center text-center p-6 rounded-lg hover:bg-[#1a3a52] transition-colors duration-300 border border-[#374151] hover:border-[#14B8A6]"
               >
                 {/* Icon */}
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mb-4 shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#14B8A6] to-[#0d9488] rounded-full flex items-center justify-center mb-4 shadow-lg">
                   <IconComponent size={32} className="text-white" />
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                <h3 className="text-xl font-bold text-white mb-2">
                   {feature.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-[#94A3B8] text-sm leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -85,14 +85,14 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-12 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-8 text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+        <div className="mt-12 bg-gradient-to-r from-[#1a3a52] to-[#0F2942] rounded-lg p-8 text-center border border-[#14B8A6]">
+          <h3 className="text-2xl font-bold text-white mb-4">
             Ready to Start Your Adventure?
           </h3>
-          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+          <p className="text-[#94A3B8] mb-6 max-w-2xl mx-auto">
             Join thousands of happy travelers who have chosen Tourz for their unforgettable journeys
           </p>
-          <button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-3 px-8 rounded-lg transition">
+          <button className="bg-[#FCD34D] hover:bg-[#EAB308] text-[#0F2942] font-bold py-3 px-8 rounded-lg transition">
             Start Exploring
           </button>
         </div>
