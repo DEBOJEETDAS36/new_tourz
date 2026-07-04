@@ -9,8 +9,8 @@ import TourInclusions from '@/components/tours/TourInclusions';
 import TourPricing from '@/components/tours/TourPricing';
 import TourGallery from '@/components/tours/TourGallery';
 import TourTestimonials from '@/components/tours/TourTestimonials';
-// import TourImportantNotes from '@/components/tours/TourImportantNotes';
-// import RelatedTours from '@/components/tours/RelatedTours';
+import TourImportantNotes from '@/components/tours/TourImportantNotes';
+import RelatedTours from '@/components/tours/RelatedTours';
 
 interface TourPageProps {
   params: Promise<{ id: string }>;
@@ -35,6 +35,8 @@ export default async function TourDetailPage({ params }: TourPageProps) {
       <TourPricing tour={tour} />
       <TourGallery tour={tour} />
       <TourTestimonials tour={tour} />
+      <TourImportantNotes tour={tour} />
+      <RelatedTours currentTourId={tour.id} />
     </div>
   );
 }
