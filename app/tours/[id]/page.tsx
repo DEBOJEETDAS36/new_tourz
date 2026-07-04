@@ -4,7 +4,7 @@ import TourDetailHero from '@/components/tours/TourDetailHero';
 import TourQuickInfo from '../../../components/tours/TourQuickInfo';
 import TourDescription from '@/components/tours/TourDescription';
 import TourHighlights from '@/components/tours/TourHighlights';
-// import TourItinerary from '@/components/tours/TourItinerary';
+import TourItinerary from '@/components/tours/TourItinerary';
 // import TourInclusions from '@/components/tours/TourInclusions';
 // import TourPricing from '@/components/tours/TourPricing';
 // import TourGallery from '@/components/tours/TourGallery';
@@ -30,6 +30,7 @@ export default async function TourDetailPage({ params }: TourPageProps) {
       <TourQuickInfo tour={tour} />
       <TourDescription tour={tour} />
       <TourHighlights tour={tour} />
+      <TourItinerary tour={tour} />
     </div>
   );
 }
