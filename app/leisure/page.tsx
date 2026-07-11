@@ -1,5 +1,5 @@
-import LeisureHero from '@/components/leisure/LeisureHero';
-import LeisureToursList from '@/components/leisure/LeisureToursList';
+import LeisureHero from '../../components/leisure/LeisureHero';
+import LeisureToursList from '../../components/leisure/LeisureToursList';
 
 export const metadata = {
   title: 'Leisure Tours | Tourz',
