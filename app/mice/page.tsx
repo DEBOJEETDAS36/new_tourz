@@ -1,5 +1,5 @@
-import MiceHero from '@/components/mice/MiceHero';
-import MiceToursList from '@/components/mice/MiceToursList';
+import MiceHero from '../../components/mice/MiceHero';
+import MiceToursList from '../../components/mice/MiceToursList';
 
 export const metadata = {
   title: 'MICE Events | Tourz',
