@@ -1,6 +1,7 @@
 'use client';
 
-import { LinkedIn, Twitter, Mail } from 'lucide-react';
+// Only import native UI icons; brand logos have been completely removed from Lucide
+import { Mail } from 'lucide-react';
 
 export default function AboutTeam() {
   const teamMembers = [
@@ -8,33 +9,33 @@ export default function AboutTeam() {
       id: 1,
       name: 'Rajesh Kumar',
       role: 'Founder & CEO',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop',
+      image: 'https://unsplash.com',
       bio: '15+ years in travel and tourism industry',
-      social: { linkedin: '#', twitter: '#', email: '#' },
+      social: { linkedin: '#', twitter: '#', email: 'mailto:rajesh@example.com' },
     },
     {
       id: 2,
       name: 'Priya Sharma',
       role: 'Head of Operations',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop',
+      image: 'https://unsplash.com',
       bio: 'Expert in tour coordination and logistics',
-      social: { linkedin: '#', twitter: '#', email: '#' },
+      social: { linkedin: '#', twitter: '#', email: 'mailto:priya@example.com' },
     },
     {
       id: 3,
       name: 'Amit Patel',
       role: 'Chief Experience Officer',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop',
+      image: 'https://unsplash.com',
       bio: 'Passionate about creating unforgettable journeys',
-      social: { linkedin: '#', twitter: '#', email: '#' },
+      social: { linkedin: '#', twitter: '#', email: 'mailto:amit@example.com' },
     },
     {
       id: 4,
       name: 'Deepa Gupta',
       role: 'Marketing Director',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop',
+      image: 'https://unsplash.com',
       bio: 'Strategic marketing and brand growth specialist',
-      social: { linkedin: '#', twitter: '#', email: '#' },
+      social: { linkedin: '#', twitter: '#', email: 'mailto:deepa@example.com' },
     },
   ];
 
@@ -70,18 +71,39 @@ export default function AboutTeam() {
 
                 {/* Social Links */}
                 <div className="flex gap-3">
+                  {/* LinkedIn - Custom SVG */}
                   <a
                     href={member.social.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-8 h-8 bg-[#14B8A6]/20 rounded flex items-center justify-center text-[#14B8A6] hover:bg-[#14B8A6]/30 transition"
                   >
-                    <Linkedin size={16} />
+                    <svg 
+                      className="w-4 h-4 fill-current" 
+                      viewBox="0 0 24 24" 
+                      aria-hidden="true"
+                    >
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
                   </a>
+
+                  {/* Twitter / X - Custom SVG */}
                   <a
                     href={member.social.twitter}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-8 h-8 bg-[#14B8A6]/20 rounded flex items-center justify-center text-[#14B8A6] hover:bg-[#14B8A6]/30 transition"
                   >
-                    <Twitter size={16} />
+                    <svg 
+                      className="w-4 h-4 fill-current" 
+                      viewBox="0 0 24 24" 
+                      aria-hidden="true"
+                    >
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
                   </a>
+
+                  {/* Email */}
                   <a
                     href={member.social.email}
                     className="w-8 h-8 bg-[#14B8A6]/20 rounded flex items-center justify-center text-[#14B8A6] hover:bg-[#14B8A6]/30 transition"
