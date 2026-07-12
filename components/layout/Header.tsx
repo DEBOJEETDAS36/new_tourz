@@ -51,10 +51,21 @@ export default function Header() {
           <nav className="hidden lg:flex space-x-1">
             {navLinks.map((link) => (
               <div key={link.name} className="relative group">
-                <button className="px-3 py-2 text-[#94A3B8] hover:text-[#14B8A6] transition font-medium flex items-center space-x-1">
-                  <span>{link.name}</span>
-                  {'subLinks' in link && <ChevronDown size={16} />}
-                </button>
+                {'subLinks' in link ? (
+                  /* Dropdown Menu Item (Kept as a button for hover behavior) */
+                  <button className="px-3 py-2 text-[#94A3B8] hover:text-[#14B8A6] transition font-medium flex items-center space-x-1">
+                    <span>{link.name}</span>
+                    <ChevronDown size={16} />
+                  </button>
+                ) : (
+                  /* Standard Nav Link (Now correctly links using Next.js Link) */
+                  <Link 
+                    href={link.href} 
+                    className="px-3 py-2 text-[#94A3B8] hover:text-[#14B8A6] transition font-medium block"
+                  >
+                    {link.name}
+                  </Link>
+                )}
 
                 {/* Desktop Dropdown */}
                 {'subLinks' in link && (
@@ -82,9 +93,12 @@ export default function Header() {
             <button className="p-2 hover:bg-[#1a3a52] rounded-lg transition">
               <User size={20} className="text-[#94A3B8]" />
             </button>
-            <button className="bg-[#FCD34D] hover:bg-[#EAB308] text-[#0F2942] font-bold px-4 py-2 rounded-lg transition">
+            <Link 
+              href="/contact" 
+              className="bg-[#FCD34D] hover:bg-[#EAB308] text-[#0F2942] font-bold px-4 py-2 rounded-lg transition"
+            >
               Contact
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -105,26 +119,37 @@ export default function Header() {
           <nav className="lg:hidden pb-4 space-y-1">
             {navLinks.map((link) => (
               <div key={link.name}>
-                <button
-                  onClick={() => setOpenDropdown(openDropdown === link.name ? null : link.name)}
-                  className="w-full text-left px-4 py-2 text-[#94A3B8] hover:bg-[#1a3a52] rounded transition font-medium flex items-center justify-between"
-                >
-                  <span>{link.name}</span>
-                  {'subLinks' in link && (
+                {'subLinks' in link ? (
+                  /* Mobile Dropdown Trigger Button */
+                  <button
+                    onClick={() => setOpenDropdown(openDropdown === link.name ? null : link.name)}
+                    className="w-full text-left px-4 py-2 text-[#94A3B8] hover:bg-[#1a3a52] rounded transition font-medium flex items-center justify-between"
+                  >
+                    <span>{link.name}</span>
                     <ChevronDown 
                       size={16} 
                       className={`transform transition-transform ${openDropdown === link.name ? 'rotate-180' : ''}`}
                     />
-                  )}
-                </button>
+                  </button>
+                ) : (
+                  /* Standard Mobile Nav Link (Now correctly links using Next.js Link) */
+                  <Link
+                    href={link.href}
+                    onClick={() => setIsMenuOpen(false)} // Closes mobile drawer automatically on click
+                    className="block px-4 py-2 text-[#94A3B8] hover:bg-[#1a3a52] rounded transition font-medium"
+                  >
+                    {link.name}
+                  </Link>
+                )}
 
-                {/* Mobile Dropdown */}
+                {/* Mobile Dropdown Options */}
                 {'subLinks' in link && openDropdown === link.name && (
                   <div className="bg-[#1a3a52]">
                     {link.subLinks?.map((subLink) => (
                       <Link
                         key={subLink.name}
                         href={subLink.href}
+                        onClick={() => setIsMenuOpen(false)} // Closes mobile drawer automatically on click
                         className="block px-6 py-2 text-[#94A3B8] hover:text-[#14B8A6] text-sm transition"
                       >
                         {subLink.name}
