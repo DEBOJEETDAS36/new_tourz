@@ -1,5 +1,5 @@
-import BlogsHero from '@/components/blogs/BlogsHero';
-import BlogsList from '@/components/blogs/BlogsList';
+import BlogsHero from '../../components/blogs/BlogsHero';
+import BlogsList from '../../components/blogs/BlogsList';
 
 export const metadata = {
   title: 'Blog | Tourz',
