@@ -11,7 +11,7 @@ export default function ContactHero() {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40" />
+      <div className="absolute inset-0 bg-linear-to-r from-black/60 to-black/40" />
 
       {/* Content */}
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4">

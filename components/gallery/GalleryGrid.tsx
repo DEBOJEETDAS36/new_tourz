@@ -111,7 +111,7 @@ export default function GalleryGrid() {
               />
 
               {/* Image Info */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-lg">
+              <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 to-transparent p-6 rounded-b-lg">
                 <h3 className="text-white text-2xl font-bold mb-2">
                   {filteredImages[selectedImageIndex].title}
                 </h3>
@@ -150,7 +150,7 @@ export default function GalleryGrid() {
                 <button
                   key={image.id}
                   onClick={() => setSelectedImageIndex(index)}
-                  className={`relative h-16 w-16 rounded-lg overflow-hidden flex-shrink-0 transition border-2 ${
+                  className={`relative h-16 w-16 rounded-lg overflow-hidden shrink-0 transition border-2 ${
                     selectedImageIndex === index
                       ? 'border-[#14B8A6] shadow-lg'
                       : 'border-white/30 hover:border-white/60'
@@ -168,7 +168,7 @@ export default function GalleryGrid() {
         )}
 
         {/* CTA Section */}
-        <div className="mt-16 bg-gradient-to-r from-[#14B8A6] to-[#0d9488] rounded-lg p-8 text-center">
+        <div className="mt-16 bg-linear-to-r from-[#14B8A6] to-[#0d9488] rounded-lg p-8 text-center">
           <h3 className="text-2xl font-bold text-white mb-4">
             Create Your Own Memories
           </h3>
