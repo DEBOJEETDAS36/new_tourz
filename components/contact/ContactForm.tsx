@@ -40,7 +40,7 @@ export default function ContactForm() {
         });
       } else {
         setStatus('error');
-        setMessage('Please fill in all required fields.');
+        setMessage('Please fill in all required fields');
       }
     }, 1500);
   };
