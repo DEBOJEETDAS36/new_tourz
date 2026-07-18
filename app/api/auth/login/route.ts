@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import connectDB from '@/lib/mongodb';
 import { Admin } from '@/lib/models/Admin';
+// @ts-ignore: jsonwebtoken has no local declaration file
 import jwt from 'jsonwebtoken';
 
 export async function POST(request: NextRequest) {
