@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import AdminDashboard from '@/components/admin/AdminDashboard';
+import AdminDashboard from '../../../components/admin/AdminDashboard';
 import { Loader } from 'lucide-react';
 
 export default function DashboardPage() {
