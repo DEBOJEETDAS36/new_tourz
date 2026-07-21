@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { Search, Plus, Edit2, Trash2, Eye, Loader } from 'lucide-react';
-import TourModal from './TourModal';
-import DeleteModal from './DeleteModal';
+import TourModal from './TourModal.tsx';
+import DeleteModal from './DeleteModal.tsx';
 
 interface Tour {
   _id: string;
