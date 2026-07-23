@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { LogOut, Menu, X, Home, FileText, BookOpen, Users, Settings } from 'lucide-react';
+import Link from 'next/link';
 
 export default function AdminDashboard({ admin }: { admin: any }) {
   const router = useRouter();
@@ -30,7 +31,7 @@ export default function AdminDashboard({ admin }: { admin: any }) {
     { icon: FileText, label: 'Blog Posts', href: '#' },
     { icon: Settings, label: 'Settings', href: '#' },
   ];
-  
+
   return (
     <div className="min-h-screen bg-[#0F2942]">
       {/* Sidebar */}
@@ -49,18 +50,18 @@ export default function AdminDashboard({ admin }: { admin: any }) {
         {/* Menu Items */}
         <nav className="mt-8 space-y-2 px-4">
           {menuItems.map((item, index) => {
-            const Icon = item.icon;
-            return (
-              <a
-                key={index}
-                href={item.href}
-                className="flex items-center gap-4 px-4 py-3 text-[#94A3B8] hover:text-white hover:bg-[#0F2942] rounded-lg transition"
-              >
-                <Icon size={20} className="flex-shrink-0" />
-                {isSidebarOpen && <span>{item.label}</span>}
-              </a>
-            );
-          })}
+          const Icon = item.icon;
+          return (
+            <Link
+              key={index}
+              href={item.href}
+              className="flex items-center gap-4 px-4 py-3 text-[#94A3B8] hover:text-white hover:bg-[#0F2942] rounded-lg transition"
+            >
+              <Icon size={20} className="flex-shrink-0" />
+              {isSidebarOpen && <span>{item.label}</span>}
+            </Link>
+          );
+        })}
         </nav>
 
         {/* Logout Button */}
