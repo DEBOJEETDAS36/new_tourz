@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose, { type Connection } from 'mongoose';
 
 const MONGODB_URI = process.env.MONGODB_URI;
 
@@ -7,7 +7,10 @@ if (!MONGODB_URI) {
 }
 
 declare global {
-  var mongoose: { conn: any; promise: any };
+  var mongoose: {
+    conn: Connection | null;
+    promise: Promise<Connection> | null;
+  };
 }
 
 let cached = global.mongoose;
@@ -26,8 +29,8 @@ async function connectDB() {
       .connect(MONGODB_URI!, {
         bufferCommands: false,
       })
-      .then((mongoose) => {
-        return mongoose;
+      .then(() => {
+        return mongoose.connection;
       });
   }
 
