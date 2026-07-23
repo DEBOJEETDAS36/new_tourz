@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { Search, Plus, Edit2, Trash2, Eye, Loader } from 'lucide-react';
-import TourModal from './TourModal.tsx';
-import DeleteModal from './DeleteModal.tsx';
+import TourModal from './TourModal';
+import DeleteModal from './DeleteModal';
 
 interface Tour {
   _id: string;
@@ -11,9 +11,11 @@ interface Tour {
   title: string;
   destination: string;
   country: string;
+  duration: string;
   price: number;
   originalPrice: number;
   category: 'leisure' | 'mice';
+  description: string;
   daysCount: number;
   isActive: boolean;
   createdAt: string;
