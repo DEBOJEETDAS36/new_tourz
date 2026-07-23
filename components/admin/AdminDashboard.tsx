@@ -24,13 +24,13 @@ export default function AdminDashboard({ admin }: { admin: any }) {
   };
 
   const menuItems = [
-    { icon: Home, label: 'Dashboard', href: '#' },
-    { icon: BookOpen, label: 'Tours', href: '#' },
+    { icon: Home, label: 'Dashboard', href: '/admin/dashboard' },
+    { icon: BookOpen, label: 'Tours', href: '/admin/dashboard/tours' },
     { icon: Users, label: 'Bookings', href: '#' },
     { icon: FileText, label: 'Blog Posts', href: '#' },
     { icon: Settings, label: 'Settings', href: '#' },
   ];
-
+  
   return (
     <div className="min-h-screen bg-[#0F2942]">
       {/* Sidebar */}
