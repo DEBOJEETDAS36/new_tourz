@@ -43,17 +43,25 @@ export default function ToursList() {
       if (searchQuery) url += '&search=' + searchQuery;
       if (selectedCategory !== 'All') url += '&category=' + selectedCategory;
 
+      console.log('Fetching from:', url); // Debug log
+
       const response = await fetch(url, {
         credentials: 'include',
       });
 
-      if (!response.ok) throw new Error('Failed to fetch tours');
+      if (!response.ok) {
+        const errorData = await response.json();
+        console.error('API Error:', errorData); // See actual error
+        throw new Error(errorData.error || `HTTP ${response.status}: Failed to fetch tours`);
+      }
 
       const data = await response.json();
+      console.log('Tours fetched:', data); // Debug log
       setTours(data.tours);
       setPagination(data.pagination);
     } catch (error) {
       console.error('Error fetching tours:', error);
+      alert(`Error: ${error instanceof Error ? error.message : 'Unknown error'}`); // Show error to user
     } finally {
       setIsLoading(false);
     }
