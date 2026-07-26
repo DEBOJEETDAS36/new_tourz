@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import BookingsList from '@/components/admin/bookings/BookingsList';
+import BookingsList from '../../../../components/admin/bookings/BookingsList';
 import { Loader, ChevronLeft } from 'lucide-react';
 
 export default function BookingsManagementPage() {
