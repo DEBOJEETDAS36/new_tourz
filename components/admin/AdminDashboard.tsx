@@ -24,10 +24,18 @@ export default function AdminDashboard({ admin }: { admin: any }) {
     }
   };
 
-  const menuItems = [
+  // const menuItems = [
+  //   { icon: Home, label: 'Dashboard', href: '/admin/dashboard' },
+  //   { icon: BookOpen, label: 'Tours', href: '/admin/dashboard/tours' },
+  //   { icon: Users, label: 'Bookings', href: '#' },
+  //   { icon: FileText, label: 'Blog Posts', href: '#' },
+  //   { icon: Settings, label: 'Settings', href: '#' },
+  // ];
+
+    const menuItems = [
     { icon: Home, label: 'Dashboard', href: '/admin/dashboard' },
     { icon: BookOpen, label: 'Tours', href: '/admin/dashboard/tours' },
-    { icon: Users, label: 'Bookings', href: '#' },
+    { icon: Users, label: 'Bookings', href: '/admin/dashboard/bookings' },
     { icon: FileText, label: 'Blog Posts', href: '#' },
     { icon: Settings, label: 'Settings', href: '#' },
   ];
