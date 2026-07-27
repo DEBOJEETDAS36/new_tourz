@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import BlogsList from '@/components/admin/blogs/BlogsList';
+import BlogsList from '../../../../components/blogs/BlogsList';
 import { Loader, ChevronLeft } from 'lucide-react';
 
 export default function BlogsManagementPage() {
