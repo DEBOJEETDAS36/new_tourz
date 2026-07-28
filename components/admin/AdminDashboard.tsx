@@ -37,7 +37,7 @@ export default function AdminDashboard({ admin }: { admin: any }) {
     { icon: BookOpen, label: 'Tours', href: '/admin/dashboard/tours' },
     { icon: Users, label: 'Bookings', href: '/admin/dashboard/bookings' },
     { icon: FileText, label: 'Blog Posts', href: '/admin/dashboard/blogs' },
-    { icon: Settings, label: 'Settings', href: '#' },
+    { icon: Settings, label: 'Settings', href: '/admin/dashboard/settings' },
   ];
 
   return (
