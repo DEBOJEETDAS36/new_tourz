@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import SettingsForm from '@/components/admin/settings/SettingsForm';
+import SettingsForm from '../../../../components/admin/settings/SettingsForm';
 import { Loader, ChevronLeft } from 'lucide-react';
 
 export default function SettingsPage() {
