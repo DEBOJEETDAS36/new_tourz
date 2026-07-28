@@ -10,7 +10,8 @@
     "type": "module",
     "seed:admins": "node scripts/seedAdmins.js",
     "seed:tours": "node scripts/seedTours.js",
-    "seed:bookings": "node scripts/seedBookings.js"
+    "seed:bookings": "node scripts/seedBookings.js",
+    "seed:blogs": "node scripts/seedBlogs.js"
   },
   "dependencies": {
     "axios": "^1.18.1",
